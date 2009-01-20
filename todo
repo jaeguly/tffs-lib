@@ -1,0 +1,8 @@
+1. design the test case carefully. [DONE]
+2. review the source. [DONE]
+3. implement the cache of sector reading and writing. [DONE]
+4. implement the chdir, import the current directory. [DONE]
+5. make tffs as a library, and restruct the directories of tffs. [DONE]
+6. implement a shell tool to test tffs handly. [DONE]
+7. bug001 remove some file and recreate it, the file will not be deleted completely.
+8. bug002 sometime created file or directory will not be shown by ls correctly. [DONE]
