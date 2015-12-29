@@ -1,39 +1,34 @@
 The TFFS project aims to create a FAT file system module for embedded system. All of code is writen by ANSI C, so it is easy to port for your architecture. You can support your own specific hardware by implimentating your own Hardware Abstraction Interface.
 
-### Feature of Tiny-FAT file system
+## Feature of Tiny-FAT file system ##
+  * Supports FAT12, FAT16 and FAT32.
+  * Supports both 8.3 format file name and Long File Name(LFN).
+  * Supports cache system to improve access speed.
+  * Hardware independent design, easy to port to specific hardware platform.
+  * Works under Linux, iTRION and None-OS environment(currently only works under Linux).
 
-* Supports FAT12, FAT16 and FAT32.
-* Supports both 8.3 format file name and Long File Name(LFN).
-* Supports cache system to improve access speed.
-* Hardware independent design, easy to port to specific hardware platform.
-* Works under Linux, iTRION and None-OS environment(currently only works under Linux).
-
-### Get latest version
-
+## Get latest version ##
 You can get the latest version of TFFS-lib by checking out from google code.
-
 ```
 svn checkout http://tffs-lib.googlecode.com/svn/trunk/ tffs-lib-read-only
 ```
 
-### Build tffs-lib
-
+## Build tffs-lib ##
 1. Enter into the tffs-lib directory and make the library.
 ```
 make
 ```
-1. _tshell_ is a test tool and a demo application to show how to use the tffs-lib. You can build it by the following command.
+2. _tshell_ is a test tool and a demo application to show how to use the tffs-lib. You can build it by the following command.
 ```
 make tsh
 ```
-1. tffs is a test application including some test cases. You can build it by using the following command.
+3. tffs is a test application including some test cases. You can build it by using the following command.
 ```
 make tffs
 ```
 
-### Test under linux
-
-1. First of all, you have to create a FAT file system image used by tsh. It can be done by the script "mkfs.sh". The following command create a FAT file system image file with the size of 32M.
+## Test under linux ##
+1. First of all, you have to create a FAT file system image used by _tsh_. It can be done by the script "_mkfs.sh_". The following command create a FAT file system image file with the size of 32M.
 ```
 mkfs.sh fat32.img 32768
 ```
@@ -211,6 +206,7 @@ Total 2 files.
 /tdir1/dir2/dir3/dir4/dir5/dir6/:>quit
 [zhangck@subnode1 tffs-lib-read-only]$
 ```
+
 3. You can also use the fat system module of linux to validate the result of tffs-lib by using the following command.
 ```
 [root@subnode1 tffs-lib-read-only]# mkdir /mnt/fatimg
@@ -226,4 +222,6 @@ drwxr-xr-x 2 root root 512  1月 20 16:24 tdir2
 -rwxr-xr-x 1 root root  44  1月 20 16:24 test1.txt
 -rwxr-xr-x 1 root root  96  1月 20 16:25 testlongfilenamefile.fileextion
 ```
-### Enjoy it
+
+## Enjoy it ##
+
